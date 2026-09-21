@@ -1,5 +1,6 @@
 
-```markdown:PLAN.md
+
+```markdown
 # Kế hoạch thực hiện: Ứng dụng Bất đẳng thức bậc hai trong bài toán thực tiễn
 
 ## Định dạng kỹ thuật
@@ -15,9 +16,7 @@ Dự án được biên soạn bằng **LaTeX** (cụ thể là trình biên d�
 
 Mặc dù dự án hiện tại có thể gộp trong một file `main.tex` duy nhất để tiện biên dịch, thư mục tổng thể được quy hoạch như sau để dễ dàng quản lý và mở rộng:
 
-
-```
-
+```text
 project/
 ├── main.tex                 # File gốc, chứa khai báo thư viện và gom nội dung
 ├── sections/                # (Tùy chọn) Thư mục chứa các file con nếu muốn tách file
@@ -35,22 +34,24 @@ project/
 
 ## Quy ước kỹ thuật trong LaTeX
 
--   **Hộp lý thuyết và định lý**: Sử dụng gói `tcolorbox` với tông màu chủ đạo là xanh dương (`blue!5!white` cho nền, `blue!60!black` cho viền) để làm nổi bật các công thức tổng quát và tính chất hình học.
--   **Trình bày Toán học**: 
-    - Dùng ký hiệu `$` cho các công thức ngắn nội tuyến (inline).
-    - Dùng môi trường `\[ ... \]` hoặc `align*` cho các phương trình, bất phương trình dài cần biểu diễn từng bước giải.
--   **Đồ họa và Trực quan hóa**: Mọi biểu đồ (quỹ đạo, mặt cắt kiến trúc, hàm lợi nhuận) **bắt buộc** phải dựng bằng lệnh `PGFPlots` (với `compat=1.18`) thay vì chèn ảnh chụp màn hình, nhằm đảm bảo file PDF xuất ra có thể zoom không vỡ nét (chuẩn vector).
+* **Hộp lý thuyết và định lý**: Sử dụng gói `tcolorbox` với tông màu chủ đạo là xanh dương (`blue!5!white` cho nền, `blue!60!black` cho viền) để làm nổi bật các công thức tổng quát và tính chất hình học.
+* **Trình bày Toán học**:
+* Dùng ký hiệu `$` cho các công thức ngắn nội tuyến (inline).
+* Dùng môi trường `\[ ... \]` hoặc `align*` cho các phương trình, bất phương trình dài cần biểu diễn từng bước giải.
+
+
+* **Đồ họa và Trực quan hóa**: Mọi biểu đồ (quỹ đạo, mặt cắt kiến trúc, hàm lợi nhuận) **bắt buộc** phải dựng bằng lệnh `PGFPlots` (với `compat=1.18`) thay vì chèn ảnh chụp màn hình, nhằm đảm bảo file PDF xuất ra có thể zoom không vỡ nét (chuẩn vector).
 
 ## Cài đặt & Biên dịch
 
 Dự án sử dụng trình biên dịch **pdfLaTeX**.
-- **Viết trực tuyến (Khuyên dùng)**: Sử dụng [Overleaf](https://www.overleaf.com/). Chỉ cần tạo project mới, copy mã nguồn vào là có thể biên dịch ngay lập tức mà không cần cài đặt môi trường.
-- **Cài đặt cục bộ**: Tải bản phân phối LaTeX (TeX Live cho Windows/Linux hoặc MacTeX cho macOS).
-- **Biên dịch cục bộ**: Tại thư mục gốc của dự án, mở terminal chạy lệnh:
-  
+
+* **Viết trực tuyến (Khuyên dùng)**: Sử dụng [Overleaf](https://www.overleaf.com/?utm_source=gemini). Chỉ cần tạo project mới, copy mã nguồn vào là có thể biên dịch ngay lập tức mà không cần cài đặt môi trường.
+* **Cài đặt cục bộ**: Tải bản phân phối LaTeX (TeX Live cho Windows/Linux hoặc MacTeX cho macOS).
+* **Biên dịch cục bộ**: Tại thư mục gốc của dự án, mở terminal chạy lệnh:
+
 ```bash
   pdflatex main.tex
-  
 
 ```
 
@@ -150,5 +151,6 @@ Trạng thái sử dụng: `Chưa bắt đầu` → `Đang soạn thảo` → `�
 * [ ] Đọc dò lại một lần cuối để bắt các lỗi đánh máy nhỏ (nếu có).
 * [ ] Tải file PDF cuối cùng về máy để nộp báo cáo.
 
-```eof
+```
 
+```
